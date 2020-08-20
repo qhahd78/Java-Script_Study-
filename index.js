@@ -5,10 +5,15 @@
 
 //let = 변경가능 const = 변경불가능 //
 const title = document.querySelector("#title"); //id 로 찾기 
-title.innerHTML = "Hi! From JS"; // html 안의 title 변경
-title.style.color = "red";  // html 조종 가능 (스타일 변경)
-document.title = 'I own you' ; // html 조종 가능 (사이트 이름 변경)
-// console.dir(title);    //html 의 요소들을 볼 수 있다. 
+// title.innerHTML = "Hi! From JS"; // html 안의 title 변경
+// title.style.color = "red";  // html 조종 가능 (스타일 변경)
+// document.title = 'I own you' ; // html 조종 가능 (사이트 이름 변경)
+// // console.dir(title);    //html 의 요소들을 볼 수 있다. 
 
-//HTML 을 DOM 객체로 바꿀 수 있다. id 를 통해. 
+// //HTML 을 DOM 객체로 바꿀 수 있다. id 를 통해. 
+function handleClick() {      //클릭할 때 색이 빨간색으로 바뀐다. 
+    title.style.color="red"; 
+}
+
+title.addEventListener("click", handleClick) //click가 일어날 때 함수호출(빨간색으로 바뀌는)
 
