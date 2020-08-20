@@ -11,20 +11,26 @@ const title = document.querySelector("#title"); //id 로 찾기
 // // // console.dir(title);    //html 의 요소들을 볼 수 있다. 
 
 // // //HTML 을 DOM 객체로 바꿀 수 있다. id 를 통해. 
-const BASE_COLOR = "rgb(52, 73, 94)";
-const OTHER_COLOR ="#7f8c8d";
+// const BASE_COLOR = "rgb(52, 73, 94)";
+// const OTHER_COLOR ="#7f8c8d";
 
-function handleClick() {      //클릭하면 
-    const currentColor = title.style.color; // 해당 색을 알려준다. 
-    if (currentColor === BASE_COLOR){
-        title.style.color = OTHER_COLOR;
-    } else {
-        title.style.color = BASE_COLOR;
-    }
-}
+// function handleClick() {      //클릭하면 
+//     const currentColor = title.style.color; // 해당 색을 알려준다. 
+//     if (currentColor === BASE_COLOR){
+//         title.style.color = OTHER_COLOR;
+//     } else {
+//         title.style.color = BASE_COLOR;
+//     }
+// }
+const CLICKED_CLASS = "cliked"; 
+
+function handleClick() {
+    title.classList.toggle(CLICKED_CLASS)
+} // clicked class 클래스가 있는 체크 후, 있으면 add 아니면 remove.
+
 
 function init(){
-    title.style.color = BASE_COLOR;
+    // title.style.color = BASE_COLOR;
     title.addEventListener("click", handleClick) //click가 일어날 때 함수호출(빨간색으로 바뀌는)
 }
 init();
